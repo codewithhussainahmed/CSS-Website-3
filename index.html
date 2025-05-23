@@ -1,0 +1,1158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <style>
+        @font-face {
+            font-family: f1;
+            src: url(Assets/f1.ttf);
+        }
+        *{
+            margin: 0px;
+        }
+        #nav{
+            position: absolute; 
+            top: 0;
+            left: 0;
+            width: 100%;
+            z-index: 100;
+            display: flex;
+            flex-direction: row;
+            list-style: none;
+            justify-content: space-evenly;
+            height: 10vh;
+            background-color: rgba(0, 0, 0, 0.312); 
+            /* border: 1px solid blue; */
+            cursor: pointer;
+            box-sizing: border-box;
+        }        
+        #n{
+            font-size: 11px;
+            color: #fff;
+            font-weight: 700;
+            text-transform: uppercase;
+            margin: 0; 
+            display: block; 
+            line-height: 1.2;
+        }
+        #n1{
+            font-family: f1;
+            font-size: 30px;
+            font-weight: 700;
+            text-transform: capitalize;
+            color: #fff;
+            display: block;
+            line-height: 1.2; 
+        }
+        #n2{
+            align-self: center;
+            font-size: 13px;
+            padding-top: 1.2rem;
+            padding-bottom: 1.2rem;
+            padding-left: 25px;
+            padding-right: 25px;
+            color: rgba(255, 255, 255, 0.7);
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            font-family: f1;
+        }
+        #n3{
+            align-self: center;
+            font-size: 13px;
+            padding-top: 1.2rem;
+            padding-bottom: 1.2rem;
+            padding-left: 25px;
+            padding-right: 25px;
+            color: rgba(255, 255, 255, 0.7);
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            font-family: f1;
+        }
+        #n4{
+            align-self: center;
+            font-size: 13px;
+            padding-top: 1.2rem;
+            padding-bottom: 1.2rem;
+            padding-left: 25px;
+            padding-right: 25px;
+            color: rgba(255, 255, 255, 0.7);
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            font-family: f1;
+        }
+        #n5{
+            align-self: center;
+            font-size: 13px;
+            padding-top: 1.2rem;
+            padding-bottom: 1.2rem;
+            padding-left: 25px;
+            padding-right: 25px;
+            color: rgba(255, 255, 255, 0.7);
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            font-family: f1;
+        }
+        #n6{
+            align-self: center;
+            font-size: 13px;
+            padding-top: 1.2rem;
+            padding-bottom: 1.2rem;
+            padding-left: 25px;
+            padding-right: 25px;
+            color: rgba(255, 255, 255, 0.7);
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            font-family: f1;
+        }
+        #n7{
+            align-self: center;
+            font-size: 13px;
+            padding-top: 1.2rem;
+            padding-bottom: 1.2rem;
+            padding-left: 25px;
+            padding-right: 25px;
+            color: rgba(255, 255, 255, 0.7);
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            font-family: f1;
+        }
+        #n8{
+            align-self: center;
+            font-size: 13px;
+            padding-top: 1.2rem;
+            padding-bottom: 1.2rem;
+            padding-left: 25px;
+            padding-right: 25px;
+            color: rgba(255, 255, 255, 0.7);
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            font-family: f1;
+        }
+        button{
+            background-color: rgb(94, 165, 29);
+            font-size: 13px;
+            color: rgba(255, 255, 255, 0.7);
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            font-family: f1;
+            height: 35px;
+            border: none;
+            outline: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        #hero {
+            position: relative; 
+            height: 110vh;
+            background-image: url(Assets/img1.jpg);
+            background-size: cover;
+            margin-bottom: 50px;
+        }        
+        #hero::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.14); 
+            z-index: 1;
+        }
+        #hero>#h1{
+            position: absolute;
+            font-family: f1;
+            font-size: 70px;
+            color: #ffffff;
+            font-weight: 400px;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50% , -50%);
+            text-align: center;
+            z-index: 10;
+        }
+        #hero>#h2{
+            color: #ffffff;
+            text-align: center;
+            font-family: f1;
+            position: absolute;
+            top: 70%;
+            left: 50%;
+            transform: translate(-50% , -50%);
+            z-index: 10;
+
+        }
+        #hero>#h3{
+            width: 250px;
+            height: 50px;
+            color: #ffffff;
+            text-align: center;
+            font-family: f1;
+            position: absolute;
+            top: 85%;
+            left: 50%;
+            transform: translate(-50% , -50%);
+            z-index: 10;
+            border-radius: 0px;
+        }
+        #search {
+            position: absolute;
+            bottom: -110px; 
+            left: 50%;
+            transform: translateX(-50%);
+            width: 80%;
+            height: 100px;
+            background: white;
+            z-index: 20;
+            display: flex;
+            /* border: 1px solid red; */
+            box-sizing: border-box;
+            align-items: center;
+            padding: 0;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1); 
+        }
+
+        #s1, #s2, #s3, #s4, #s5 {
+            position: relative;
+            flex: 1;
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items:start ;
+            margin: 0;
+            text-transform: capitalize;
+            font-family: f1;
+            font-size: 15px;
+            font-weight: 700;
+            /* border: 1px solid red; */
+            padding-left: 20px;
+            /* padding-top: 30px; */
+            /* margin-top: 30px; */
+            flex-direction: column;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.489); 
+        } 
+        #s5{
+            align-items: center;
+            padding: 0%;
+            background-color: rgb(94, 165, 29);
+        } 
+        .c11{
+            color: grey;
+        }   
+        #body{
+            /* border: 1px solid red; */
+            display: flex;
+            position: relative;
+            justify-content: center;
+        }   
+        #b1{
+            /* border: 1px solid red; */
+            justify-content: center;
+            margin: auto;
+            text-transform: uppercase;
+            font-family: f1;
+            color: rgb(94, 165, 29);
+            font-weight: 900;
+            position: absolute;
+            top: 100px;
+        }
+        #b2{
+            /* border: 1px solid red; */
+            justify-content: center;
+            margin: auto;
+            text-transform: capitalize;
+            font-family: f1;
+            font-size: 50px;
+            position: absolute;
+            top: 120px;
+            font-weight: 700;
+            align-items: center;
+            vertical-align: middle;
+            justify-items: center;
+        }
+        #b3{
+            display: flex;
+            /* border: 1px solid red; */
+            position: relative;
+            top: 350px;
+            width: 100%;
+            height: 200px;
+            justify-content: center;
+            align-content: center;
+        }
+        .b4{
+            display: flex;
+            border: 5px solid white;
+            outline: none;
+            background-color: rgb(245, 250, 241);
+            width: 200px;
+            font-size: 100px;
+            text-align: center;
+            /* vertical-align: middle;
+            justify-content: space-around; */
+            flex-direction: column;
+            box-sizing: border-box;
+        }
+        .b4:hover{
+            background-color:rgb(94, 165, 29);
+            color: white;
+        }
+        .b5{
+            font-size: 30px;
+            font-family: f1;
+        }
+        #area{
+            /* border: 1px solid red; */
+            position: absolute;
+            top: 1400px;
+            width: 100%;
+            height: 400px;
+            box-sizing: border-box;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        #a1 , #a2 , #a3 , #a4{
+            /* border: 1px solid blueviolet; */
+            box-shadow: 10px  5px 12px rgb(182, 201, 207);
+            display: flex;
+            justify-content: space-between;
+            width: 70%;
+            line-height: 20px;
+            align-content: center;
+            margin-bottom: 20px;
+        }
+        .a1{
+            font-family: f1;
+            font-weight: 600;
+            /* border: 1px solid black; */
+            align-content: center;
+            padding: 5px 10px;
+            text-align: center;
+        }
+        .a2{
+            font-weight: 300;
+            color: rgb(94, 165, 29);
+            background-color: rgb(245, 250, 241);
+            padding: 5px 10px;
+            display: block;
+            width: 180px;
+            font-weight: 500;
+        }
+        .a2:hover{
+            background-color: rgb(94, 165, 29) ;
+            color: rgb(245, 250, 241);
+        }
+        #card{
+            /* border: 1px solid saddlebrown; */
+            position: absolute;
+            top: 1800px;
+            width: 100%;
+            height: 1000px;
+            box-sizing: border-box;
+            background-color: rgb(247, 247, 247);
+            display: flex;
+            justify-content: center;
+            position: absolute;
+        }
+        #c1{
+            text-transform: uppercase;
+            color: rgb(94, 165, 29);
+            font-family: f1;
+            font-weight: 900;
+            position: relative;
+            top: 100px;
+            /* border: 1px solid red; */
+            height: 20px;
+            left: 17%;
+        }
+        #c2{
+            text-transform: capitalize;
+            font-family: f1;
+            font-size: 50px;
+            position: relative;
+            top: 150px;
+            left: -5%;
+            /* border: 1px solid red; */
+            height: 60px;
+            font-weight: 800;
+        }
+        #sc{
+            /* border: 1px solid green; */
+            display: flex;
+            position: relative;
+            top: 1150px;
+            justify-content: center;
+            gap: 20px;
+        }
+        #c3 , #c4 , #c5 , #c6{
+            height: 400px;
+            width: 300px;
+            /* border: 1px solid gold; */
+            box-shadow: 5px 5px 5px gray;
+        }
+        #c3>img{ 
+            width: 100%;
+            height: 100%;
+        }
+        #c3:hover .c3{
+            display: inline;
+        }
+        #c4>img{ 
+            width: 100%;
+            height: 100%;
+        }
+        #c4:hover .c4{
+            display: inline;
+        }
+        
+        #c5>img{ 
+            width: 100%;
+            height: 100%;
+        }
+        #c5:hover .c5{
+            display: inline;
+        }
+
+        #c6>img{ 
+            width: 100%;
+            height: 100%;
+        }
+        #c6:hover .c6{
+            display: inline;
+        }
+
+        .c3 , .c4 , .c5 , .c6{
+            /* border: 1px solid rebeccapurple; */
+            position: absolute;
+            height: 200px;
+            width: 300px;
+            box-sizing: border-box;
+        }
+        .c3{
+            left: 45px;
+            background-color: rgba(46, 44, 44, 0.567);
+            display: none;
+
+        }
+        .c3>button{
+            position: absolute;
+            left: 30px;
+            top: 20px;
+        }
+        .c3>p{
+            position: absolute;
+            left: 30px;
+            top: 60px;
+            color: rgb(247, 247, 247) ;
+        }
+        .c3>button:hover{
+            background-color: rgb(247, 247, 247);
+            color: rgb(94, 165, 29);
+        }
+        .c4{
+            left: 365px;
+            background-color: rgba(46, 44, 44, 0.567);
+            display: none;
+        }
+        .c4>button{
+            position: absolute;
+            left: 30px;
+            top: 20px;
+        }
+        .c4>p{
+            position: absolute;
+            left: 30px;
+            top: 60px;
+            color: rgb(247, 247, 247) ;
+        }
+        .c4>button:hover{
+            background-color: rgb(247, 247, 247);
+            color: rgb(94, 165, 29);
+        }
+        .c5{
+            left: 685px;
+            background-color: rgba(46, 44, 44, 0.567);
+            display: none;
+        }
+        .c5>button{
+            position: absolute;
+            left: 30px;
+            top: 20px;
+        }
+        .c5>p{
+            position: absolute;
+            left: 30px;
+            top: 60px;
+            color: rgb(247, 247, 247) ;
+        }
+        .c5>button:hover{
+            background-color: rgb(247, 247, 247);
+            color: rgb(94, 165, 29);
+        }
+        .c6{
+            left: 1005px;
+            background-color: rgba(46, 44, 44, 0.567);
+            display: none;
+        }
+        .c6>button{
+            position: absolute;
+            left: 30px;
+            top: 20px;
+        }
+        .c6>p{
+            position: absolute;
+            left: 30px;
+            top: 60px;
+            color: rgb(247, 247, 247) ;
+        }
+        .c6>button:hover{
+            background-color: rgb(247, 247, 247);
+            color: rgb(94, 165, 29);
+        }
+        #img {
+            width: 100%;
+            height: 600px;
+            position: relative;
+            top: 1300px;
+            background-image: url(Assets/img2.jpg);
+            background-size:cover ;
+            background-position: center;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+       #imgt {
+            position: relative;
+            width: 100%;
+            height: 100%;
+            text-align: center;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            color: white;
+            background-color: rgba(0, 0, 0, 0.429);
+            font-family: f1;
+            display: none;
+        }
+        #imgt>#span{
+           font-size: 50px;
+           font-weight: 500; 
+           display: block;
+           color: white;
+        }
+        #img:hover #imgt{
+            display: flex;
+        }
+        #about{
+            /* border: 1px solid blue; */
+            width: 100%;
+            height: 900px;
+            display: flex;
+            position: relative;
+            top: 1400px;
+            box-sizing: border-box;
+
+        }
+        #v1{
+            width: 400px;
+            height: 900px;
+            position: absolute;
+            left: 100px;
+            background-image: url(Assets/img3.jpg);
+            background-size:contain ;
+            background-position: center;
+            /* background-attachment: fixed; */
+        }
+        #v3 {
+            height: 400px;
+            width: 700px;
+            background-image: url(Assets/img4.jpg);
+            position: absolute;
+            left: 550px;
+            bottom: 0; 
+            background-size: contain;
+            background-position: center;
+        }
+        #tsec{
+            position: absolute;
+            left: 550px;
+            /* border: 1px solid brown; */
+        }
+        #tsec1{
+            /* border: 1px solid black; */
+            font-family: f1;
+            color: rgb(94, 165, 29);
+            font-weight: 900;
+            text-transform: uppercase;
+            margin-bottom: 20px;
+        }
+        #tsec2{
+            /* border: 1px solid green; */
+            font-family: f1;
+            text-transform: capitalize;
+            font-size: 55px;
+            margin-bottom: 50px;
+        }
+        #tsec3{
+            /* border: 1px solid blue; */
+            font-family: f1;
+            font-weight: 400;
+            color: gray;
+            line-height: 20px;
+        }
+        #chart{
+            /* border: 1px solid blue; */
+            position: absolute;
+            left: 550px;
+            top: 350px;
+            display: flex;
+            gap: 50px;
+        }
+        .chart1{
+            /* border: 1px solid green; */
+            display: flex;
+            flex-direction: column;
+            font-family: f1;
+            font-size: 40px;
+        }
+        .chart2{
+            /* border: 1px solid blue; */
+            color: rgb(94, 165, 29);
+            text-transform: uppercase;
+            font-size: 13px;
+            font-weight: 700;
+        }
+        #img2 {
+            width: 100%;
+            height: 300px;
+            position: relative;
+            top: 1500px;
+            box-sizing: border-box;
+            background-image: url(Assets/img5.jpg);
+            background-size: cover;
+            background-position: center;
+        }
+
+        #imgte {
+            display: none;
+            /* border: 1px solid rebeccapurple; */
+            width: 100%;
+            box-sizing: border-box;
+        }
+
+        #img2:hover #imgte {        
+            display: flex; 
+        }   
+        #imgt2{
+            position: absolute;
+            top: 100px;
+            left: 300px;
+            font-family: f1;
+            font-weight: 600;
+            color: white;
+            font-size: 40px;
+        }
+        #imgt3{
+            position: absolute;
+            top: 140px;
+            left: 800px;
+            /* background-color: black; */
+            border-radius: 0%;
+            color: #ffffff;
+            width: 150px;
+            height: 50px;
+        }
+        #agents{
+            /* border: 1px solid orange; */
+            width: 100%;
+            height: 800px;
+            position: relative;
+            top: 1700px;
+            box-sizing: border-box;
+        }
+        #blue{
+            height: 100%;
+            width: 70%;
+            background-color: rgb(5, 13, 33);
+            position: relative;
+
+        }
+        #at{
+            color: rgb(94, 165, 29);
+            font-family: f1;
+            font-size: 15px;
+            font-weight: 800;
+            text-transform: uppercase;
+            position: absolute;
+            top: 160px;
+            left: 230px;
+        }
+        #att{
+            font-family: f1;
+            color: #ffffff;
+            font-size: 50px;
+            font-weight: 700;
+            position: absolute;
+            top: 200px;
+            left: 230px;
+        }
+        #persons{
+            display: flex;
+            position: relative;
+            /* border: 1px solid orange; */
+            top: -450px;
+            gap: 20px;
+            justify-content: center;
+            box-sizing: border-box;
+        }
+        #p1 , #p2 , #p3 , #p4{
+            width: 250px;
+            height: 400px;
+            /* border: 1px solid green; */
+        }
+        #p1{
+            background-image: url(Assets/img6.jpg);
+            background-size: cover;
+            background-position: center;
+        }
+        #p2{
+            background-image: url(Assets/img7.jpg);
+            background-size: cover;
+        }
+        #p3{
+            background-image: url(Assets/img8.jpg);
+            background-size: cover;
+        }
+        #p4{
+            background-image: url(Assets/img9.jpg);
+            background-size: cover;
+        }
+        #agentstext{
+            /* border: 1px solid palevioletred; */
+            width: 100%;
+            height: 150px;
+            box-sizing: border-box;
+            position: relative;
+            top: -600px;
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+        }
+        #at1 , #at2 , #at3 , #at4{
+            color: white;
+            font-family: f1;
+            /* border: 1px solid red; */
+            width: 250px;
+            height: 150px;
+            box-sizing: border-box;
+            background-color: rgba(95, 165, 29, 0.749);
+            padding-top: 40px;
+            padding-left: 50px;
+            font-family: f1;
+            font-size: 25px;
+            font-weight: 500;
+        }
+        #end{
+            background-color: rgb(6, 17, 42);
+            width: 100%;
+            box-sizing: border-box;
+            /* border: 1px solid violet; */
+            position: relative;
+            top: 1800px;
+            height: 90vh;
+            cursor: pointer;
+        }
+        .end{
+            /* border: 1px solid white; */
+            display: flex;
+            cursor: pointer;
+        }
+        #e1{
+            padding-top: 150px;
+            /* border: 1px solid white; */
+            color: white;
+            font-family: f1;
+            font-size: 25px;
+            font-weight: 500;
+            text-transform: capitalize;
+            display: flex;
+            list-style: none;
+            justify-content: space-evenly;
+        }
+        #e2{
+            /* border: 1px solid white; */
+            color: white;
+            list-style-type: none;
+            font-family: f1;
+            display: flex;
+            flex-direction: column;
+            padding-left: 140px;
+            padding-top: 50px;
+        }
+        #ep2>button{
+            height: 30px;
+            width: 30px;
+            border-radius: 50%;
+        }
+        #e3{
+            /* border: 1px solid white; */
+            color: white;
+            font-family: f1;
+            list-style-type:none ;
+            padding-top: 50px;
+        }
+        #e4{
+            /* border: 1px solid white; */
+            color: white;
+            font-family: f1;
+            list-style-type:none ;
+            padding-top: 50px;
+        }
+        #e5{
+            /* border: 1px solid white; */
+            color: white;
+            font-family: f1;
+            list-style-type:none ;
+            padding-top: 50px;
+            padding-left: 100px;
+        }
+        #e6{
+            color: white;
+            font-family: f1;
+            list-style-type:none ;
+            padding-top: 50px;
+            padding-left: 60px;
+
+        }
+        .e6icons{
+            padding-right: 20px;
+            /* border: 1px solid green; */
+            margin: auto;
+            color: rgb(94, 165, 29);
+
+        }
+
+        #end2{
+            background-color: rgb(5, 13, 33);
+            height: 100px;
+            width: 100%;
+            box-sizing: border-box;
+            /* border: 1px solid yellowgreen; */
+            position: relative;
+            top: 1800px;
+        }
+</style>
+</head>
+<body>
+    <ul id="nav">
+        <li id="n1">Oakberry <br>
+            <small id="n">Real Estate Agency</small>
+        </li>
+        <li id="n2">Home</li>
+        <li id="n3">About</li>
+        <li id="n4">Properties</li>
+        <li id="n5">Blog</li>
+        <li id="n6">Agents</li>
+        <li id="n7">Contact</li>
+        <li id="n8">
+            <button>Submit A Property</button>
+        </li>
+    </ul>
+    <div id="hero" data-aos="fade-up" data-aos-duration="1000" data-aos-once="true">
+        <p id="h1"  >
+            Modern House <br> Make Better Life
+        </p>
+        <p id="h2" >
+            A small river named Duden flows by their place and supplies it with the <br>necessary regelialia. It is a paradisematic country, in which roasted parts of <br>sentences fly into your mouth.
+        </p>
+        <button id="h3">Learn more</button>
+    </div>
+    <div id="search">
+        <div id="s1">ENTER KEYWORD
+            <p class="c11">
+
+                <i class="fa-solid fa-magnifying-glass"></i>
+                Enter Keyword
+            </p>
+        </div>
+        <div id="s2">PROPERTY TYPE
+            <p class="c11">
+                <i class="fa-solid fa-circle-chevron-down"></i>
+                Residential
+            </p>
+        </div>
+        <div id="s3">LOCATION
+            <p class="c11">
+
+                <i class="fa-solid fa-location-dot"></i>
+                Seach Location
+            </p>
+        </div>
+        <div id="s4">PRICE LIMIT
+            <p class="c11">
+
+                <i class="fa-solid fa-circle-chevron-down"></i>
+                $100
+            </p>
+        </div>
+        <div id="s5">SEARCH</div>
+    </div>
+    <div id="body" data-aos="fade-up" data-aos-duration="3000" data-aos-once="true">
+        <p id="b1">
+            oakberry categories
+        </p>
+        <p id="b2">
+            Explore Our Categories & <br> &nbsp; &nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Places
+        </p>
+        <div id="b3">
+            <div class="b4">
+                <i class="fa-solid fa-landmark"></i>
+                <p class="b5">Land</p>
+            </div>
+            <div class="b4">
+                <i class="fa-solid fa-house-user"></i>
+                <p class="b5">Residential</p>
+            </div>
+            <div class="b4">
+                <i class="fa-solid fa-building"></i>
+                <p class="b5">Commercial</p>
+            </div>
+            <div class="b4">
+                <i class="fa-solid fa-industry"></i>
+                <p class="b5">Industrial</p>
+            </div>
+        </div>
+    </div>
+    <div id="area" data-aos="fade-up" data-aos-duration="3000" data-aos-once="true">
+        <div id="a1">
+            <div class="a1">New York
+                <button class="a2">200 Properties</button>
+            </div>
+            <div class="a1">California
+                <button class="a2">100 Properties</button>
+
+            </div>
+            <div class="a1">Florida
+                <button class="a2">422 Properties</button>
+
+            </div>
+        </div>
+        <div id="a2">
+            <div class="a1">London
+                <button class="a2">100 Properties</button>
+            </div>
+            <div class="a1">Tennesse
+                <button class="a2">200 Properties</button>
+            </div>
+            <div class="a1">Charlotte
+                <button class="a2">200 Properties</button>
+            </div>
+        </div>
+        <div id="a3">
+            <div class="a1">Chicago
+                <button class="a2">120 Properties</button>
+            </div>
+            <div class="a1">Texas
+                <button class="a2">200 Properties</button>
+            </div>
+            <div class="a1">Orlando
+                <button class="a2">200 Properties</button>
+            </div>
+        </div>
+        <div id="a4">
+            <div class="a1">Illinois
+                <button class="a2">300 Properties</button>
+            </div>
+            <div class="a1">North Carolina
+                <button class="a2">200 Properties</button>
+            </div>
+            <div class="a1">Atlanta
+                <button class="a2">200 Properties</button>
+            </div>
+        </div>
+    </div>
+    <div id="card" data-aos="fade-up" data-aos-duration="3000" data-aos-once="true">
+        <div id="c1">
+            our Properties
+        </div>
+        <div id="c2">
+            Featured properties
+        </div>
+    </div>
+    <div id="sc" data-aos="fade-up" data-aos-duration="3000" data-aos-once="true">
+        <div id="c3">
+            <img src="Assets/c3.jpg" alt="">
+            <div class="c3">
+                <button>$800,000</button>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque, ad.</p>
+            </div>
+        </div>
+        <div id="c4">
+            <img src="Assets/c4.jpg" alt="">
+            <div class="c4">
+                <button>$800,000</button>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque, ad.</p>
+            </div>
+        </div>
+        <div id="c5">
+            <img src="Assets/c5.jpg" alt="">
+            <div class="c5">
+                <button>$800,000</button>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque, ad.</p>  
+            </div>
+        </div>
+        <div id="c6">
+            <img src="Assets/c6.jpg" alt="">
+            <div class="c6">
+                <button>$800,000</button>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque, ad.</p>    
+            </div>
+        </div>
+    </div>
+    <div id="img" data-aos="fade-up" data-aos-duration="3000" data-aos-once="true">
+        <div id="imgt"> <span id="span">Modern House Video </span> <br> Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</div>
+    </div>
+    <div id="about" data-aos="fade-up" data-aos-duration="3000" data-aos-once="true">
+        <div id="v1"></div>
+        <div id="v2">
+            <div id="tsec">
+                <span id="tsec1">About us</span>
+                <h1 id="tsec2">Oakberry A Real Estate <br> Company</h1>
+                <p id="tsec3">Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live <br> the blind texts. Separated they live in Bookmarksgrove right at the coast of the Semantics, a large <br> language ocean.</p>
+            </div>
+            <div id="chart">
+                <div class="chart1">50 <span class="chart2">years of experience</span></div>
+                <div class="chart1">210K+ <span class="chart2">Total Properties</span></div>
+                <div class="chart1">450 <span class="chart2">Qualified Realtors</span></div>
+                <div class="chart1">100 <span class="chart2">total branches</span></div>
+            </div>
+            <div id="v3"></div>
+        </div>
+    </div>
+    <div id="img2" data-aos="fade-up" data-aos-duration="3000" data-aos-once="true">
+        <div id="imgte">
+            <div id="imgt2">Find Best Place For <br> Living</div>
+            <button id="imgt3">get in touch</button>
+        </div>
+    </div>
+    <div id="agents"data-aos="fade-up" data-aos-duration="3000" data-aos-once="true">
+        <div id="blue">
+            <div id="at">Meet our agents</div>
+            <div id="att">Our agents</div>
+        </div>
+        <div id="persons">
+            <div id="p1"></div>
+            <div id="p2"></div>
+            <div id="p3"></div>
+            <div id="p4"></div>
+        </div>
+        <div id="agentstext">
+            <div id="at1">Mick Bochs
+                <div class="agentsicons">
+                    <i class="fa-brands fa-twitter"></i>
+                    <i class="fa-brands fa-facebook"></i>
+                    <i class="fa-brands fa-google"></i>
+                    <i class="fa-brands fa-square-instagram"></i>
+                </div>
+            </div>
+            <div id="at2">Mick Bochs
+                <div class="agentsicons">
+                    <i class="fa-brands fa-twitter"></i>
+                    <i class="fa-brands fa-facebook"></i>
+                    <i class="fa-brands fa-google"></i>
+                    <i class="fa-brands fa-square-instagram"></i>
+                </div>
+            </div>
+            <div id="at3">Mick Bochs
+                <div class="agentsicons">
+                    <i class="fa-brands fa-twitter"></i>
+                    <i class="fa-brands fa-facebook"></i>
+                    <i class="fa-brands fa-google"></i>
+                    <i class="fa-brands fa-square-instagram"></i>
+                </div>
+            </div>
+            <div id="at4">Mick Bochs
+                <div class="agentsicons">
+                    <i class="fa-brands fa-twitter"></i>
+                    <i class="fa-brands fa-facebook"></i>
+                    <i class="fa-brands fa-google"></i>
+                    <i class="fa-brands fa-square-instagram"></i>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="end">
+        <ul id="e1">
+            <li class="e1">Oakberry  <br><small>Real Estate Agency</small></li>
+            <li class="e1">offers</li>
+            <li class="e1">company</li>
+            <li class="e1">quick links</li>
+            <li class="e1">have a questions?</li>
+        </ul>
+        <div class="end">
+
+            <ul id="e2">
+                <li id="ep1">A small river named Duden flows <br> by their place and supplies it with <br> the necessary regelialia.</li>
+                <li id="ep2">
+                    <button class="eicons">
+                        <i class="fa-brands fa-square-instagram"></i>
+                    </button>
+                    <button class="eicons">
+                        <i class="fa-brands fa-twitter"></i>
+                    </button>
+                    <button class="eicons">
+                        <i class="fa-brands fa-facebook"></i>
+                    </button>
+                </li>
+            </ul>
+            <ul id="e3">
+                <li> <i class="fa-solid fa-caret-right">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</i>Properties</li>
+                <li> <i class="fa-solid fa-caret-right">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</i>Agents</li>
+                <li> <i class="fa-solid fa-caret-right">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</i>Locations</li>
+                <li> <i class="fa-solid fa-caret-right">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</i>Client support</li>
+            </ul>
+            <ul id="e4">
+                <li> <i class="fa-solid fa-caret-right">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</i>Home </li>
+                <li> <i class="fa-solid fa-caret-right">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</i>About</li>
+                <li> <i class="fa-solid fa-caret-right">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</i>Blog</li>
+                <li> <i class="fa-solid fa-caret-right">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</i>Contact us</li>
+            </ul>
+            <ul id="e5">
+                <li> <i class="fa-solid fa-caret-right">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</i>Terms & Conditions</li>
+                <li> <i class="fa-solid fa-caret-right">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</i>User's Guide</li>
+                <li> <i class="fa-solid fa-caret-right">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</i>Support Center</li>
+                <li> <i class="fa-solid fa-caret-right">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</i>Press info</li>
+            </ul>
+            <ul id="e6">
+                <li><span class="e6icons"><i class="fa-solid fa-map"></i></span>203 Fake St. Mountain View,<br> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; San Francisco, California, USA</li>
+                <li><span class="e6icons" id="e6icons"><i class="fa-solid fa-phone"></i></span>+92 327 371 2942</li>
+                <li><span class="e6icons"><i class="fa-solid fa-paper-plane"></i></span>ilovemadina2102@gmail.com</li>
+            </ul>
+    </div>
+    </div>
+    <div id="end2">
+
+    </div>
+
+
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
+</body>
+</html>
